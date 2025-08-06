@@ -14,7 +14,7 @@ TELEGRAM_CHAT_ID = "-4706073326"
 
 # Chỉ theo dõi BTCUSDT
 SYMBOLS = {
-    "BTC_USDT": {"binance_symbol": "PUMPUSDT", "candle_interval": "5m", "limit": 2}
+    "BTC_USDT": {"binance_symbol": "SOLUSDT", "candle_interval": "5m", "limit": 2}
 }
 
 def send_telegram_alert(message, is_critical=False):
@@ -114,7 +114,7 @@ def send_telegram_notification(candle, analysis):
         candle_time = candle["open_time"].astimezone(VIETNAM_TIMEZONE).strftime("%H:%M:%S")
         
         message = f"""
-📊 *PUMP/USDT - Nến {analysis['candle_type'].upper()}* lúc {candle_time}
+📊 *SOL/USDT - Nến {analysis['candle_type'].upper()}* lúc {candle_time}
 ━━━━━━━━━━━━━━
 📈 Giá Mở: {analysis['open']:,.2f}
 📉 Giá Đóng: {analysis['close']:,.2f}
@@ -140,7 +140,7 @@ def send_telegram_notification(candle, analysis):
         print(f"🚨 {error_msg}")
 
 def main():
-    print("🟢 Khởi động trình theo dõi BTC/USDT")
+    print("🟢 Khởi động trình theo dõi SOL/USDT")
     print(f"⏱ Múi giờ: {VIETNAM_TIMEZONE}")
     send_telegram_alert(f"Theo Toàn là có nhà, có xe . Khởi động trình theo dõi PUMP/USDT ...", is_critical=False)
     
