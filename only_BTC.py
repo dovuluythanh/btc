@@ -142,7 +142,7 @@ def send_telegram_notification(candle, analysis):
 def main():
     print("🟢 Khởi động trình theo dõi SOL/USDT")
     print(f"⏱ Múi giờ: {VIETNAM_TIMEZONE}")
-    send_telegram_alert(f"Theo Toàn là có nhà, có xe . Khởi động trình theo dõi PUMP/USDT ...", is_critical=False)
+    send_telegram_alert(f"Theo Toàn là có nhà, có xe . Khởi động trình theo dõi SOL/USDT ...", is_critical=False)
     
     while True:
         try:
